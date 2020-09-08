@@ -14,7 +14,7 @@ namespace FluentNHibernate.Testing.Cfg.Db
         {
             OracleClientConfiguration.Oracle9
                 .ToProperties()
-                .ShouldContain("connection.driver_class", typeof(OracleClientDriver).AssemblyQualifiedName)
+                .ShouldContain("connection.driver_class", typeof(OracleManagedDataClientDriver).AssemblyQualifiedName)
                 .ShouldContain("dialect", typeof(Oracle9iDialect).AssemblyQualifiedName);
         }
 
@@ -23,7 +23,7 @@ namespace FluentNHibernate.Testing.Cfg.Db
         {
             OracleClientConfiguration.Oracle10
                 .ToProperties()
-                .ShouldContain("connection.driver_class", typeof(OracleClientDriver).AssemblyQualifiedName)
+                .ShouldContain("connection.driver_class", typeof(OracleManagedDataClientDriver).AssemblyQualifiedName)
                 .ShouldContain("dialect", typeof(Oracle10gDialect).AssemblyQualifiedName);
         }
 
